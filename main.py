@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import messagebox
 YELLOW = "#f7f5dd"
 FONT_NAME = "Bree Serif"
 GREEN ="#58C14F"
@@ -116,6 +115,7 @@ def end_game():
     disable_btns()
     print(f"{winner_symbol} is winner")
 
+#called when game is over
 def disable_btns():
     btn1.config(state=DISABLED)
     btn2.config(state=DISABLED)
@@ -127,7 +127,7 @@ def disable_btns():
     btn8.config(state=DISABLED)
     btn9.config(state=DISABLED)
 
-
+#resets the state to beginning of game
 def reset_game():
     global btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, count
     reset_btn.grid_forget()
